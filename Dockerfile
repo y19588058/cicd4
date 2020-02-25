@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk:11-latest
+FROM azul/zulu-openjdk-centos:11-latest
 
 # Default payara ports to expose
 # 4848: admin console
