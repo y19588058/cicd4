@@ -39,7 +39,7 @@ WORKDIR ${HOME_DIR}
 
 # Download and unzip the Payara distribution
 #RUN wget --no-verbose -O payara.zip https://s3-eu-west-1.amazonaws.com/payara.fish/payara-prerelease.zip && \
-#COPY /home/k5user/payara.zip ./ 
+COPY payara.zip payara.zip 
 RUN chown payara:payara payara.zip && \
     unzip -qq payara.zip -d ./ && \
     mv payara*/ appserver && \
