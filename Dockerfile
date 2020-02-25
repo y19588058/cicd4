@@ -44,7 +44,8 @@ RUN groupadd -g 1000 payara && \
     apt-get update && \
     apt-get install -y wget unzip && \
     rm -rf /var/lib/apt/lists/*
-
+    echo 'work path:'
+    pwd
 # Install tini as minimized init system
 RUN wget --no-verbose -O /tini https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini && \
     wget --no-verbose -O /tini.asc https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini.asc && \
