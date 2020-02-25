@@ -83,7 +83,7 @@ RUN wget --no-verbose -O payara.zip ${PAYARA_PKG} && \
         ${PAYARA_DIR}/glassfish/domains/domain1
 
 # Copy across docker scripts
-COPY --chown=payara:payara ${PAYARA_DIR}/bin/*.sh ${SCRIPT_DIR}/
+COPY --chown=payara:payara bin/*.sh ${SCRIPT_DIR}/
 RUN mkdir -p ${SCRIPT_DIR}/init.d && \
     chmod +x ${SCRIPT_DIR}/*
 
