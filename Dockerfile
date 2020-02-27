@@ -1,6 +1,5 @@
 FROM azul/zulu-openjdk:11
 
-USER payara
 # Default payara ports to expose
 # 4848: admin console
 # 9009: debug port (JPDA)
