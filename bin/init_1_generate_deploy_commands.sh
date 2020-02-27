@@ -31,7 +31,7 @@ if [ -z $PREBOOT_COMMANDS ]; then echo "Variable PREBOOT_COMMANDS is not set."; 
 if [ -z $POSTBOOT_COMMANDS ]; then echo "Variable POSTBOOT_COMMANDS is not set."; exit 1; fi
 
 # Create pre and post boot command files if they don't exist
-sudo
+
 touch $POSTBOOT_COMMANDS
 touch $PREBOOT_COMMANDS
 
