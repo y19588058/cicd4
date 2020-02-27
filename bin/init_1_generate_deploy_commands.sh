@@ -23,13 +23,15 @@
 # Note that many parameters to the deploy command can be safely used only when 
 # a single application exists in the $DEPLOY_DIR directory.
 ################################################################################
-
+echo '%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+whoami
 # Check required variables are set
 if [ -z $DEPLOY_DIR ]; then echo "Variable DEPLOY_DIR is not set."; exit 1; fi
 if [ -z $PREBOOT_COMMANDS ]; then echo "Variable PREBOOT_COMMANDS is not set."; exit 1; fi
 if [ -z $POSTBOOT_COMMANDS ]; then echo "Variable POSTBOOT_COMMANDS is not set."; exit 1; fi
 
 # Create pre and post boot command files if they don't exist
+sudo
 touch $POSTBOOT_COMMANDS
 touch $PREBOOT_COMMANDS
 
